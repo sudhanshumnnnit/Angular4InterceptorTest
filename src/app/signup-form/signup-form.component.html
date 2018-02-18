@@ -1,8 +1,6 @@
-<p>
-  signup-form works!
-</p>
+
 <div class="container">
-    <form>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
         <div class="form-group">
             <label for="firstName">First name</label>  
             <input ngModel id="firstName" #firstName='ngModel' name="firstName" type="text" class="form-control" required>
@@ -40,12 +38,6 @@
             <input ngModel id="dob" name= "dob" type="text" class="form-control" required #dob="ngModel">
             <div class="alert alert-danger" *ngIf='dob.touched && !dob.valid'>dob is required.</div>
         </div>
-
-         <div class="form-group">
-           <label for="comment">Comment</label>
-           <textarea ngModel name="comment" id="comment" cols="30" rows="5" class="form-control" required #comment="ngModel"></textarea>
-           <div class="alert alert-danger" *ngIf='comment.touched && !comment.valid'>comment  is required.</div>
-          </div>
-          <button class="btn btn-primary">submit</button>
+          <button class="btn btn-primary" type="submit">submit</button>
       </form>
 </div>

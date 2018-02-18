@@ -9,6 +9,9 @@ export class SignupFormComponent implements OnInit {
 
   constructor() { }
 
+  onSubmit(value:any){
+    console.log(value);
+  } 
   ngOnInit() {
   }
 

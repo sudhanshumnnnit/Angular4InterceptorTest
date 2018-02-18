@@ -11,6 +11,7 @@ import { UserData } from '../user.model';
 })
 export class LoginFormComponent implements OnInit {
   public userObj:UserData;
+  public errFlag:boolean=false;
   constructor(private authenticationService:AuthenticationService,private router:Router,private _userService:UserService) { }
 
   loginUser(e) {
@@ -23,7 +24,9 @@ export class LoginFormComponent implements OnInit {
       this.authenticationService.setUserLoggedIn();
       //localStorage.setItem("auth_token",this.userObj.authToken);
   		this.router.navigate(['home']);
-  	}
+  	}else{
+      this.errFlag=true;
+    }
   }
 
   ngOnInit() {

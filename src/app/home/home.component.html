@@ -1,10 +1,11 @@
 
 <div class="container">
+  
 <table class="table table-striped">
   <thead>
     <tr>
-      <th colspan='2'>Welcome {{loggedInUser|uppercase}}</th>
-      
+      <th >Welcome {{loggedInUser|uppercase}}</th>
+      <th><a [routerLink]="['/signup-form']">Sign-Up</a></th>
     </tr>
   </thead>
   <tbody>

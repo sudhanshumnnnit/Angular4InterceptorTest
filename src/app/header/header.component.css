@@ -2,5 +2,15 @@ header {
 	text-align: center;
 	padding: 20px 0;
 	font-size: 30px;
+	background: #1976d2;
+    color: #fff;
 	border-bottom: 2px solid green;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
 }
+
