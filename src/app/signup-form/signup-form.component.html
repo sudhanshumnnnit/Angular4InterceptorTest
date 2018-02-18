@@ -1,0 +1,51 @@
+<p>
+  signup-form works!
+</p>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="firstName">First name</label>  
+            <input ngModel id="firstName" #firstName='ngModel' name="firstName" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf='firstName.touched && !firstName.valid'>First Name is required.</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="lastName">Last name</label>  
+            <input ngModel id="lastName" name="lastName" #lastName="ngModel" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf='lastName.touched && !lastName.valid'>Last Name is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="surName">Sur name</label>  
+            <input ngModel id="surName" name="surName" type="text" class="form-control" required #surName="ngModel">
+            <div class="alert alert-danger" *ngIf='surName.touched && !surName.valid'>Sur Name is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>  
+            <input ngModel id="mobile" name="mobile" type="text" class="form-control" required #mobile="ngModel">
+            <div class="alert alert-danger" *ngIf='mobile.touched && !mobile.valid'>Mobile No is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>  
+            <input ngModel id="email" name= "email" type="text" class="form-control" required #email="ngModel">
+            <div class="alert alert-danger" *ngIf='email.touched && !email.valid'>email is required.</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address</label>  
+            <input ngModel id="address" name="address" type="text" class="form-control" required #address="ngModel">
+            <div class="alert alert-danger" *ngIf='address.touched && !address.valid'>Address is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="dob">DOB</label>  
+            <input ngModel id="dob" name= "dob" type="text" class="form-control" required #dob="ngModel">
+            <div class="alert alert-danger" *ngIf='dob.touched && !dob.valid'>dob is required.</div>
+        </div>
+
+         <div class="form-group">
+           <label for="comment">Comment</label>
+           <textarea ngModel name="comment" id="comment" cols="30" rows="5" class="form-control" required #comment="ngModel"></textarea>
+           <div class="alert alert-danger" *ngIf='comment.touched && !comment.valid'>comment  is required.</div>
+          </div>
+          <button class="btn btn-primary">submit</button>
+      </form>
+</div>
