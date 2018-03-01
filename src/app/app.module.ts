@@ -26,7 +26,7 @@ const appRoutes:Routes=[
   component:HomeComponent
   },
   {path:'signup-form',
-  canActivate:[AuthguardGuard],
+  // canActivate:[AuthguardGuard],
   component:SignupFormComponent
   },
   { path: '**', redirectTo: '' }
